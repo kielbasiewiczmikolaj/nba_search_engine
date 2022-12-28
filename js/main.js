@@ -47,7 +47,7 @@ function getAverages(id) {
         url: "https://www.balldontlie.io/api/v1/season_averages?player_ids[]=" + id,
         method: "GET",
         dataType: "json"
-    }).success(function (data) {
+    }).done(function (data) {
             //console.log(data);
 
 
@@ -84,7 +84,7 @@ function doSearch() {
             url: "https://www.balldontlie.io/api/v1/players?search=" + player_name1,
             method: "GET",
             dataType: "json"
-        }).success(function (data) {
+        }).done(function (data) {
             console.log(data);
             if (data.data.length == 0) {
                 $("#error_result").show();
