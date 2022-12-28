@@ -1,0 +1,61 @@
+.masthead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 100vh; /* if you don't want it to take up the full screen, reduce this number */
+    overflow: hidden;
+    background-size: cover !important;
+    background: url(../images/background_basket.jpg) no-repeat center center scroll;
+    background-position: left;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .masthead {
+      background-size: 150% !important;
+      background-position: initial;
+      background-color: black;
+    }
+  }
+
+#result{
+  color: white;
+  
+  
+  
+  margin-bottom: 40px;
+  width: 600px;
+  height: fit-content;
+  
+  
+  
+  
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: large;
+  border-radius: 10px;
+  padding-bottom: 30px;
+  background: linear-gradient(#ff5050,#ff6600);
+  border: solid;
+  
+  
+  
+}
+
+#input{
+  min-height: auto;
+}
+
+
+
+#error_result{
+  width: 600px;
+  color: white;
+}
+
+#try_again{
+  width: 600px;
+  color: white;
+  
+}
