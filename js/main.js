@@ -17,14 +17,14 @@ $(document).on("keydown", function (event) {
     }
 });
 
+var player_translations = new Map();
 
-//todo: 
+player_translations.set("first_name", "Imię");
+player_translations.set("last_name", "Nazwisko");
+player_translations.set("position", "Pozycja");
+player_translations.set("team", "Drużyna");
 
 
-//3. rozne pozycje graczy roznymi kolorami
-
-
-//6. MAPY DO IMIENIA/NAZWISKA/DRUZYNY
 var map1 = new Map();
 map1.set("games_played", "Rozegrane mecze");
 map1.set("pts", "Punkty na mecz");
@@ -56,7 +56,7 @@ function getAverages(id) {
                     if (map1.has(key)) {
 
                         $('#result').append('<br>' + map1.get(key) + ":" + value);
-
+                        
 
                     }
                 }
@@ -65,6 +65,9 @@ function getAverages(id) {
             $("#try_again").hide();    
             $('#error_result').hide();
             }
+            
+          
+       
             
         }
     )
@@ -102,15 +105,15 @@ function doSearch() {
 
             var results = data.data[0];
             $.each(results, function (key, value) {
-                if (values_to_display.includes(key)) {
+                if (player_translations.has(key)) {
                     if (typeof value === 'object' && value != null) {
-                        $('#result').append("<br>" + key + ": " + value.full_name + "<br>");
+                        $('#result').append("<br>" + player_translations.get(key) + ": " + value.full_name + "<br>");
 
 
       
               } else{  
 
-                        $('#result').append('<br>' + key + ': ' + value);
+                        $('#result').append('<br>' + player_translations.get(key) + ': ' + value);
                     }
 
 
