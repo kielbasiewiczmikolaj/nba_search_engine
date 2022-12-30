@@ -130,4 +130,3 @@ function doSearch() {
     }
 }
 
-// https://www.balldontlie.io/api/v1/season_averages?seasons[]=2021&player_ids[]= + player1_id, <--- kolejne zapytanie o statsy
