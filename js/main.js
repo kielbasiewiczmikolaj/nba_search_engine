@@ -52,13 +52,12 @@ function getAverages(id) {
 
 
             if (data.data.length) {
-              $.each(data.data[0], function (key, value) {
-                    if (map1.has(key)) {
-
-                        $('#result').append('<br>' + map1.get(key) + ":" + value);
+              map1.forEach(function (value, key) {
+                     
+                        $('#result').append('<br>' + value + ": " + data.data[0][key]);
                         
 
-                    }
+                    
                 }
             )
             $('#result').show();
