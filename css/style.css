@@ -59,3 +59,18 @@
   color: white;
   
 }
+
+#project{
+  display: grid;
+  position: absolute;
+  left: 1100px;
+  margin-top: 5px;
+}
+
+
+#git{
+  display: grid;
+  position: absolute;
+  left: 1210px;
+  margin-top: 5px;
+}
