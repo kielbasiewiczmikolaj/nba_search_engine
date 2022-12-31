@@ -39,7 +39,6 @@ map1.set("ft_pct", "Skuteczność rzutów osobistych");
 
 var season_averages;
 
-var values_to_display = ["first_name", "last_name", "position", "team"];
 
 
 function getAverages(id) {
@@ -60,6 +59,7 @@ function getAverages(id) {
                     
                 }
             )
+            
             $('#result').show();
             $("#try_again").hide();    
             $('#error_result').hide();

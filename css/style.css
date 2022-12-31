@@ -1,4 +1,5 @@
 .masthead {
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,6 +10,7 @@
     overflow: hidden;
     background-size: cover !important;
     background: url(../images/background_basket.jpg) no-repeat center center scroll;
+    
     background-position: left;
   }
   
@@ -59,4 +61,20 @@
   color: white;
   
 }
+
+#project:hover{
+  background-color: rgb(255, 106, 0);
+
+}
+
+#git:hover{
+  background-color: rgb(255, 106, 0);
+}
+
+#linkedin:hover{
+  background-color: rgb(255, 106, 0);
+}
+
+
+
 
