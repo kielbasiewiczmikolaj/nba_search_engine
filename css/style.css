@@ -60,24 +60,3 @@
   
 }
 
-#project{
-  display: grid;
-  position: absolute;
-  left: 1119px;
-  margin-top: 5px;
-}
-
-
-#git{
-  display: grid;
-  position: absolute;
-  left: 1230px;
-  margin-top: 5px;
-}
-
-#disc{
-  display: grid;
-  position: absolute;
-  left: 1330px;
-  margin-top: 5px;
-}
