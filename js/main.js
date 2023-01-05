@@ -1,6 +1,10 @@
 $(document).ready(function () {
     $("input:text:visible:first").focus();
-
+    $("#project").click(function () {
+        $("#project_info").show();
+        $("#input").hide()
+        $(".container").hide()
+    })
 });
 
 const searchButton = $('button');
@@ -59,8 +63,11 @@ function getAverages(id) {
                     
                 }
             )
-            
-            $('#result').show();
+            $('#result').show()
+            /*$('.container').animate({
+                bottom:'+=100px',
+                
+            });*/
             $("#try_again").hide();    
             $('#error_result').hide();
             }
@@ -79,7 +86,9 @@ function doSearch() {
 
     if (player_name1.length == 0) {
         $("#error_result").show();
+      
         $("#try_again").hide();
+        
         $("#result").hide();
     } else {
         $.ajax({
@@ -89,11 +98,14 @@ function doSearch() {
         }).done(function (data) {
             console.log(data);
             if (data.data.length == 0) {
+                
                 $("#error_result").show();
+           
                 $("#result").hide();
                 $("#try_again").hide();
             } else if (data.data.length > 1) {
-              $("#try_again").show();
+                $("#try_again").show();
+             
                 $("#result").hide();
                 
 
@@ -129,6 +141,8 @@ function doSearch() {
 
     }
 
+  
 
 }
+
 
